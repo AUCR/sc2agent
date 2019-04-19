@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  sc2agent:
+    container_name: sc2agent
+    image: sc2agent
+    networks:
+      - scagent
+    env_file:
+    - ./config-file.env
+
+networks:
+  scagent:
+    driver: bridge
